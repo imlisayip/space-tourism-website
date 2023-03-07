@@ -12,19 +12,18 @@
 
     <link rel="stylesheet" href="index.css" />
 
-    <link rel="stylesheet" href="index.css" />
+    <style></style>
   </head>
   <body>
     <div class="container flow">
-      <h1>Design System</h1>
+      <h1 class="uppercase">Design system</h1>
 
       <section class="flow" id="colors" style="margin: 4rem 0">
-        <h2 class="numbered-title"><span>01</span>colors</h2>
-
+        <h2 class="numbered-title"><span>01</span> colors</h2>
         <div class="flex">
           <div class="flow" style="flex-grow: 1">
             <div
-              class="bg-dark text-white"
+              class="bg-dark text-white ff-serif fs-500"
               style="padding: 3rem 1rem 1rem; border: 1px solid white"
             >
               #0B0D17
@@ -34,7 +33,7 @@
           </div>
           <div class="flow" style="flex-grow: 1">
             <div
-              class="bg-accent text-dark"
+              class="bg-accent text-dark ff-serif fs-500"
               style="padding: 3rem 1rem 1rem; border: 1px solid white"
             >
               #D0D6F9
@@ -44,19 +43,19 @@
           </div>
           <div class="flow" style="flex-grow: 1">
             <div
-              class="bg-white text-dark"
+              class="bg-white text-dark ff-serif fs-500"
               style="padding: 3rem 1rem 1rem; border: 1px solid white"
             >
               #FFFFFF
             </div>
             <p><span class="text-accent">RGB</span> 255, 255, 255</p>
-            <p><span class="text-accent">HSL</span> 0, 0%, 0%</p>
+            <p><span class="text-accent">HSL</span> 0°, 0%, 100%</p>
           </div>
         </div>
       </section>
 
       <section class="flow" id="typography" style="margin: 4rem 0">
-        <h2 class="numbered-title"><span>02</span>Typography</h2>
+        <h2 class="numbered-title"><span>02 </span>Typography</h2>
         <div class="flex">
           <div class="flow" style="flex-basis: 100%; --flow-space: 4rem">
             <div>
@@ -106,7 +105,7 @@
               <p class="text-accent">
                 Nav Text - Barlow Condensed Regular - 16px - 2.7 Character Space
               </p>
-              <p class="fs-300 ff-sans-cond letter-spacing-2 uppercase">
+              <p class="fs-300 uppercase ff-sans-cond letter-spacing-2">
                 Europa
               </p>
             </div>
@@ -132,90 +131,105 @@
           </div>
         </div>
       </section>
+
       <section class="flow" id="interactive-elements">
-        <h2 class="numbered-title"><span>03</span>Interactive Elements</h2>
+        <h2 class="numbered-title"><span>03</span> Interactive elements</h2>
+
         <!-- navigation -->
         <div>
           <nav>
             <ul class="primary-navigation underline-indicators flex">
               <li class="active">
-                <a class="uppercase letter-spacing-2 text-white" href="#">
-                  <span>00</span>Active
-                </a>
+                <a class="uppercase text-white letter-spacing-2" href="#"
+                  ><span>01</span>Active</a
+                >
               </li>
               <li>
-                <a class="uppercase letter-spacing-2 text-white" href="#">
-                  <span>01</span>Hover
-                </a>
+                <a class="uppercase text-white letter-spacing-2" href="#"
+                  ><span>02</span>Hovered</a
+                >
               </li>
               <li>
-                <a class="uppercase letter-spacing-2 text-white" href="#">
-                  <span>02</span> Idle
-                </a>
+                <a class="uppercase text-white letter-spacing-2" href="#"
+                  ><span>03</span>Idle</a
+                >
               </li>
             </ul>
           </nav>
         </div>
+
         <div class="flex">
-          <!-- explore button -->
           <div style="margin-top: 5rem">
+            <!-- explore button -->
             <a
               href="#"
               class="large-button uppercase ff-serif fs-600 text-dark bg-white"
+              >Explore</a
             >
-              Explore
-            </a>
-            <p class="text-accent">Landing Page Main Button - Idle</p>
-            <!--
-            <a
-              href="#"
-              class="large-button uppercase ff-serif fs-600 text-dark bg-white"
-            >
-              Explore
-            </a>
-            <p class="text-accent">Landing Page Main Button - Hover</p>
-            -->
           </div>
-          <!-- tabs dots numbers -->
+
           <div class="flow" style="margin-bottom: 50vh; --flow-space: 4rem">
+            <!-- Tabs -->
             <div class="tab-list underline-indicators flex">
               <button
                 aria-selected="true"
-                class="uppercase text-accent bg-dark ff-sans-cond letter-spacing-2"
+                class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2"
               >
                 Moon
               </button>
               <button
                 aria-selected="false"
-                class="uppercase text-accent bg-dark ff-sans-cond letter-spacing-2"
+                class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2"
               >
                 Mars
               </button>
               <button
                 aria-selected="false"
-                class="uppercase text-accent bg-dark ff-sans-cond letter-spacing-2"
+                class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2"
               >
                 Europa
               </button>
             </div>
-            <p class="text-accent">Tabs(Active, Hover, & Idle)</p>
+
+            <!-- Dots -->
             <div class="dot-indicators flex">
               <button aria-selected="true">
-                <span class="sr-only">Button title</span>
+                <span class="sr-only">Slide title</span>
               </button>
               <button aria-selected="false">
-                <span class="sr-only">Button title</span>
+                <span class="sr-only">Slide title</span>
               </button>
               <button aria-selected="false">
-                <span class="sr-only">Button title</span>
+                <span class="sr-only">Slide title</span>
               </button>
             </div>
-            <p class="text-accent">Slider 1 States(Active, Hover, & Idle)</p>
-            <p class="text-accent">Slider 2 States(Active, Hover, & Idle)</p>
+
+            <!-- Numbers -->
+            <div class="number-indicators flex">
+              <button
+                aria-selected="true"
+                class="text-white ff-serif letter-spacing-2 fs-600"
+              >
+                <span class="sr-only">Slide title</span>1
+              </button>
+              <button
+                aria-selected="false"
+                class="text-white ff-serif letter-spacing-2 fs-600"
+              >
+                <span class="sr-only">Slide title</span>2
+              </button>
+              <button
+                aria-selected="false"
+                class="text-white ff-serif letter-spacing-2 fs-600"
+              >
+                <span class="sr-only">Slide title</span>3
+              </button>
+            </div>
           </div>
         </div>
       </section>
     </div>
+
     <script src="index.pack.js"></script>
   </body>
 </html>
