@@ -135,6 +135,27 @@
       <section class="flow" id="interactive-elements">
         <h2 class="numbered-title"><span>03</span>Interactive Elements</h2>
         <!-- navigation -->
+        <div>
+          <nav>
+            <ul class="primary-navigation underline-indicators flex">
+              <li class="active">
+                <a class="uppercase letter-spacing-2 text-white" href="#">
+                  <span>00</span>Active
+                </a>
+              </li>
+              <li>
+                <a class="uppercase letter-spacing-2 text-white" href="#">
+                  <span>01</span>Hover
+                </a>
+              </li>
+              <li>
+                <a class="uppercase letter-spacing-2 text-white" href="#">
+                  <span>02</span> Idle
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
         <div class="flex">
           <!-- explore button -->
           <div style="margin-top: 5rem">
@@ -145,6 +166,7 @@
               Explore
             </a>
             <p class="text-accent">Landing Page Main Button - Idle</p>
+            <!--
             <a
               href="#"
               class="large-button uppercase ff-serif fs-600 text-dark bg-white"
@@ -152,13 +174,34 @@
               Explore
             </a>
             <p class="text-accent">Landing Page Main Button - Hover</p>
+            -->
           </div>
           <!-- tabs dots numbers -->
-          <!-- <div style="margin-bottom: 50vh">
+          <div style="margin-bottom: 50vh">
+            <div class="tab-list underline-indicators flex">
+              <button
+                aria-selected="true"
+                class="uppercase text-accent bg-dark ff-sans-cond letter-spacing-2"
+              >
+                Moon
+              </button>
+              <button
+                aria-selected="false"
+                class="uppercase text-accent bg-dark ff-sans-cond letter-spacing-2"
+              >
+                Mars
+              </button>
+              <button
+                aria-selected="false"
+                class="uppercase text-accent bg-dark ff-sans-cond letter-spacing-2"
+              >
+                Europa
+              </button>
+            </div>
             <p class="text-accent">Tabs(Active, Hover, & Idle)</p>
             <p class="text-accent">Slider 1 States(Active, Hover, & Idle)</p>
             <p class="text-accent">Slider 2 States(Active, Hover, & Idle)</p>
-          </div> -->
+          </div>
         </div>
       </section>
     </div>
