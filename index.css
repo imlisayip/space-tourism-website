@@ -139,6 +139,10 @@ select {
   gap: var(--gap, 1rem);
 }
 
+.d-block {
+  display: block;
+}
+
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-space, 1rem);
 }
@@ -389,4 +393,8 @@ select {
   color: hsl(var(--clr-dark));
   background-color: hsl(var(--clr-white));
   border-color: hsl(var(--clr-white) / 1);
+}
+
+.homepage-title span {
+  display: block;
 }
