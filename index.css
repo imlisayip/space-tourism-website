@@ -327,20 +327,42 @@ select {
 }
 
 .primary-navigation {
-  --gap: 8rem;
   --underline-gap: 2rem;
   list-style: none;
   padding: 0;
   margin: 0;
+  flex-direction: row;
+}
+
+@media (max-width: 35rem) {
+  .primary-navigation {
+    --underline-gap: 0.5rem;
+    position: fixed;
+    background: lightgreen;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+    list-style: none;
+    padding: min(20rem, 10vh) 2rem;
+    margin: 0;
+    flex-direction: column;
+    border-bottom: 0;
+  }
+
+  .primary-navigation.underline-indicators > .active {
+    border-bottom: 0;
+  }
+}
+.primary-navigation a > span {
+  font-weight: 700;
+  margin-right: 0.5em;
 }
 
 .primary-navigation a {
   text-decoration: none;
 }
 
-.primary-navigation a > span {
-  font-weight: 700;
-  margin-right: 0.5em;
+.primary-header {
+  justify-content: space-between;
 }
 
 .underline-indicators > * {
