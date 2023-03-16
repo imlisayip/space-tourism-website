@@ -2,7 +2,6 @@
 /* Custom properties   */
 /* ------------------- */
 
-/* mobile */
 :root {
   /* colors */
   --clr-dark: 230 35% 7%;
@@ -25,7 +24,6 @@
   --ff-sans-normal: "Barlow", sans-serif;
 }
 
-/* tablet  */
 @media (min-width: 35em) {
   :root {
     --fs-800: 5rem;
@@ -35,7 +33,6 @@
   }
 }
 
-/* desktop */
 @media (min-width: 45em) {
   :root {
     /* font-sizes */
@@ -93,6 +90,7 @@ body {
 
   display: grid;
   grid-template-rows: min-content 1fr;
+
   overflow-x: hidden;
 }
 
@@ -327,23 +325,29 @@ select {
   transform: scale(1.5);
 }
 
-/*  primary header  */
+/* primary header */
+
 .logo {
-  margin: 1.5rem clamp(1.5rem, 5vw, 3.5px);
+  margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
 }
 
 .primary-header {
   justify-content: space-between;
+  align-items: center;
 }
 
 .primary-navigation {
-  --gap: clamp(1.5rem, 5vw, 3.5px);
+  --gap: clamp(1.5rem, 5vw, 3.5rem);
   --underline-gap: 2rem;
   list-style: none;
   padding: 0;
   margin: 0;
-  flex-direction: row;
-  background: hsl(var(--clr-dark) / 0.95);
+  background: hsl(var(--clr-white) / 0.05);
+  backdrop-filter: blur(1.5rem);
+}
+
+.primary-navigation a {
+  text-decoration: none;
 }
 
 .primary-navigation a > span {
@@ -351,20 +355,9 @@ select {
   margin-right: 0.5em;
 }
 
-.primary-navigation a {
-  text-decoration: none;
-}
-
 .mobile-nav-toggle {
   display: none;
 }
-
-/* @supports (backdrop-filter: blur(1.5rem)) {
-  .primary-navigation {
-    background: hsl(var(--clr-white) / 0.05);
-    backdrop-filter: blur(1.5rem);
-  }
-} */
 
 @media (max-width: 35rem) {
   .primary-navigation {
@@ -373,10 +366,9 @@ select {
     z-index: 1000;
     inset: 0 0 0 30%;
     list-style: none;
-    padding: min(20rem, 10vh) 2rem;
+    padding: min(20rem, 15vh) 2rem;
     margin: 0;
     flex-direction: column;
-    border-bottom: 0;
     transform: translateX(100%);
     transition: transform 500ms ease-in-out;
   }
@@ -386,23 +378,26 @@ select {
   }
 
   .primary-navigation.underline-indicators > .active {
-    border-bottom: 0;
+    border: 0;
   }
 
   .mobile-nav-toggle {
     display: block;
-    cursor: pointer;
     position: absolute;
     z-index: 2000;
     right: 1rem;
     top: 2rem;
     background: transparent;
-    background-image: url("./assets/shared/icon-hamburger.svg");
+    background-image: url(./assets/shared/icon-hamburger.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: 1.5rem;
     aspect-ratio: 1;
     border: 0;
+  }
+
+  .mobile-nav-toggle[aria-expanded="true"] {
+    background-image: url(./assets/shared/icon-close.svg);
   }
 
   .mobile-nav-toggle:focus-visible {
@@ -411,13 +406,36 @@ select {
   }
 }
 
-@media (min-width: 35em) and (max-width: 45em) {
+@media (min-width: 35em) {
   .primary-navigation {
-    padding-inline: 3rem;
+    padding-inline: clamp(3rem, 7vw, 7rem);
   }
+}
 
+@media (min-width: 35em) and (max-width: 49.99em) {
   .primary-navigation a > span {
     display: none;
+  }
+}
+
+@media (min-width: 45em) {
+  .primary-header::after {
+    content: "";
+    display: block;
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin-right: -2.5rem;
+    background: hsl(var(--clr-white) / 0.25);
+    order: 1;
+  }
+
+  nav {
+    order: 2;
+  }
+
+  .primary-navigation {
+    margin-block: 2rem;
   }
 }
 
@@ -487,26 +505,27 @@ select {
   display: block;
 }
 
-/* ------------------- */
-/* Page Specific       */
-/* ------------------- */
-
-.body {
+/* ----------------------------- */
+/* Page specific background      */
+/* ----------------------------- */
+body {
   background-size: cover;
   background-position: bottom center;
 }
 /* home */
 .home {
-  background-image: url("./assets/home/background-home-mobile.jpg");
+  background-image: url(./assets/home/background-home-mobile.jpg);
 }
-@media (min-width: 35em) {
+
+@media (min-width: 35rem) {
   .home {
     background-position: center center;
-    background-image: url("./assets/home/background-home-tablet.jpg");
+    background-image: url(./assets/home/background-home-tablet.jpg);
   }
 }
-@media (min-width: 45em) {
+
+@media (min-width: 45rem) {
   .home {
-    background-image: url("./assets/home/background-home-desktop.jpg");
+    background-image: url(./assets/home/background-home-desktop.jpg);
   }
 }
